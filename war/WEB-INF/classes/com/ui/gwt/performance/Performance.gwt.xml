@@ -1,0 +1,27 @@
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0//EN"
+        "http://google-web-toolkit.googlecode.com/svn/releases/2.0/distro-source/core/src/gwt-module.dtd">
+<!--
+  ~ Copyright (c) 2009 - 2011 CampaignSpring. All rights reserved.
+  -->
+
+<module>
+
+    <inherits name='com.google.gwt.user.User'/>
+
+    <define-property name="logging.level" values="on, off"/>
+    <set-property name="logging.level" value="on"/>
+
+    <replace-with class="com.ui.gwt.performance.client.impl.LoggerOnImpl">
+        <when-type-is class="com.ui.gwt.performance.client.Logger"/>
+        <all>
+            <when-property-is name="logging.level" value="on"/>
+        </all>
+    </replace-with>
+
+    <replace-with class="com.ui.gwt.performance.client.impl.LoggerOffImpl">
+        <when-type-is class="com.ui.gwt.performance.client.Logger"/>
+        <all>
+            <when-property-is name="logging.level" value="off"/>
+        </all>
+    </replace-with>
+</module>

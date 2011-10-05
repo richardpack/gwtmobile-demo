@@ -1,0 +1,23 @@
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0//EN"
+        "http://google-web-toolkit.googlecode.com/svn/releases/2.0/distro-source/core/src/gwt-module.dtd">
+<!--
+  ~ Copyright (c) 2009 - 2011 CampaignSpring. All rights reserved.
+  -->
+
+<module rename-to="mobile">
+    <source path="client"/>
+
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.maps.GoogleMaps"/>
+    <inherits name="com.ui.gwt.performance.Performance"/>
+    <set-property name="logging.level" value="on"/>
+
+    <entry-point class='com.ui.gwt.mobile.client.MobileEntryPoint'/>
+    <!--
+        This disables resource inlining - the use of data urls ex data: xyz.
+        Might want to use this to minimize # of downloads, but this will increase the overall download size but is cached
+    -->
+    <set-property name="ClientBundle.enableInlining" value="false"/>
+
+</module>

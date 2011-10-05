@@ -1,0 +1,200 @@
+/*
+ * Copyright 2011 Richard Pack
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
+@external .*;
+
+body {
+    font: 12px arial, sans-serif;
+    color: #777;
+    background-color: black;
+    margin: 2px;
+}
+
+div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 0;
+    color: #fafafa;
+}
+
+h6 {
+    font-size: 1.17em;
+    margin: 0;
+}
+
+a, a:active, a:visited {
+    color: #015BA7
+}
+
+.container {
+    margin-top: 22px;
+}
+
+.heading {
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #939393;
+    margin-right: 1px;
+}
+
+.empty {
+    text-align: center;
+    margin: 30% auto;
+}
+
+.detailPanel {
+    padding: 5px;
+    background-color: #F9F9F9;
+
+    bottom: 0;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+}
+
+
+.details {
+    margin-bottom: 40px;
+}
+.details .profilePic {
+    margin-right: 10px;
+    float: left;
+}
+
+.details .detailBlock {
+    display: table-cell;
+    vertical-align: top;
+    width: 700px;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.scrollPanel {
+    background-color: #F9F9F9;
+    bottom: 0;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+}
+
+@if user.agent gecko1_8{
+.scrollPanel {
+    overflow-y: auto;
+}
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color:#C5C5C5
+}
+
+li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #363636;
+    cursor: pointer;
+}
+
+li.loading {
+    text-align: center;
+}
+
+li.loading img {
+    margin-right: 3px;
+}
+
+.contactList .profilePic {
+    margin-right: 10px;
+    float: left;
+    height: 40px
+}
+
+.contactList .detailBlock {
+    display: table-cell;
+    vertical-align: top;
+    width: 700px;
+    line-height: 15px;
+    word-wrap: break-word;
+}
+
+.contactList .selected {
+    background-color: #D2E2E9;
+    color:#fafafa;
+}
+
+.listChevron {
+    left: 100%;
+    margin-right: 0.5em;
+    position: relative;
+    top: -2.6em;
+}
+
+.listChevron > span {
+    position: absolute;
+    width: 0.3em;
+    height: 0.8em;
+    background: #5D5D5D;
+}
+
+.listChevron > span:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.listChevron > span:last-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0.4em;
+}
+
+.scrollerFrameDesktop {
+    overflow-x: auto;
+    overflow-y: hidden;
+    bottom: 0;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+}
+
+.scrollerFrameMobile {
+    overflow: hidden;
+    bottom: 0;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+}
+
+.map {
+    border: 1px solid gray;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    margin-right: 8px;
+    padding: 4px;
+}
